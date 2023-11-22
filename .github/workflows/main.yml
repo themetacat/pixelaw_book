@@ -2,7 +2,7 @@ name: CI/CD
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - "src/**"
     - "book.toml"
@@ -19,5 +19,5 @@ jobs:
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: pixelaw/pixelaw
-        PUBLISH_BRANCH: master
+        PUBLISH_BRANCH: main
         PUBLISH_DIR: ./book
