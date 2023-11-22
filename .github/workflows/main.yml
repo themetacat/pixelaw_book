@@ -12,12 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - name: Setup mdBook
       uses: peaceiris/actions-mdbook@v1
       with:
         mdbook-version: 'latest'
+
     - name: Build
       uses: ./.github/actions/build
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -25,3 +28,12 @@ jobs:
         external_repository: pixelaw/pixelaw
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./book
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./book
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
