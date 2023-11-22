@@ -55,7 +55,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
-          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           enablement: true
 
       - name: Upload artifact
