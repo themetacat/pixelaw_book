@@ -6,6 +6,8 @@
 -   Dojo - install [here](https://book.dojoengine.org/getting-started/quick-start.html)
 -   Scarb - install [here](https://docs.swmansion.com/scarb/download)
 -   NodeJS - install [here](https://nodejs.org/en/download)
+-   Docker - install [here](https://docs.docker.com/engine/install/)
+-   Docker compose plugin - install [here](https://docs.docker.com/compose/install/)
 
 ## Developing Locally
 
