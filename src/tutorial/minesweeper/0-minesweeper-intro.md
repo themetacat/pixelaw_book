@@ -1,8 +1,4 @@
-## What we build: Minesweeper
-
-For details, please see [wiki](https://en.wikipedia.org/wiki/Minesweeper_(video_game))
-
-### Functions
+#s## Functions
 We need following functions:
 - init: initialize application settings.
 - interact: interact with PixeLAW field. When we start game, we call this function to set up field.
@@ -79,6 +75,19 @@ In `ActionsImpl`, please declare functions.
 ```rust
 #[dojo::contract]
 mod minesweeper_actions {
+    /// ...
+    use poseidon::poseidon_hash_span;
+    #[derive(Drop, starknet::Event)]
+    struct GameOpened {
+        game_id: u32,
+        creator: ContractAddress
+    }
+
+    #[event]
+    #[derive(Drop, starknet::Event)]
+    enum Event {
+        GameOpened: GameOpened
+    }
     /// ...
     #[external(v0)]
     impl ActionsImpl of IMinesweeperActions<ContractState> {

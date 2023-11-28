@@ -36,6 +36,13 @@
 
  # Tutorial
 
- - [Minesweeper](./tutorial/minesweeper/README.md)
-  - [0. Setup](./tutorial/minesweeper/0-setup.md)
+- [Setup and Deploy](./tutorial/setup-deploy/README.md)
+ - [0. Setup](./tutorial/setup-deploy/0-setup.md)
+ - [1. Init App](./tutorial/setup-deploy/1-init-app.md)
+ - [2. Read Default App](./tutorial/setup-deploy/2-read-default.md)
+
+- [Minesweeper](./tutorial/minesweeper/README.md)
+ - [0. Minesweeper Intro](./tutorial/minesweeper/0-minesweeper-intro.md)
+ - [1. Init and interact](./tutorial/minesweeper/1-init-and-interact.md)
+ - [2. Implment the rest](./tutorial/minesweeper/2-implement-rest.md)
 
