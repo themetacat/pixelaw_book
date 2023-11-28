@@ -106,11 +106,11 @@ Resolution: Delete the `contracts/target` dir
 
 ### How do I use different accounts while testing?
 Register 2 accounts (example from https://github.com/coostendorp/dojo-rps): 
-```
+```rust,ignore
 let player1 = starknet::contract_address_const::<0x1337>();
 let player2 = starknet::contract_address_const::<0x1338>();
 ```
 And then switch accounts like this:
-```
+```rust,ignore
 starknet::testing::set_contract_address(player1);
 ```

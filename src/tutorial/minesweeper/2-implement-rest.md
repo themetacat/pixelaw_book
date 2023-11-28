@@ -1,6 +1,6 @@
 ## Implement `reveal()`
 
-```rust
+```rust,ignore
 /// Reveal a pixel on a certain position
 ///
 /// # Arguments
@@ -33,7 +33,7 @@ fn reveal(self: @ContractState, default_params: DefaultParameters) {
 ```
 
 ## Implement `explode()`
-```rust
+```rust,ignore
 /// Explode a pixel on a certain position
 ///
 /// # Arguments
@@ -66,7 +66,7 @@ fn explode(self: @ContractState, default_params: DefaultParameters) {
 ```
 
 ## Implement `owner_less()`
-```rust
+```rust,ignore
 fn ownerless_space(self: @ContractState, default_params: DefaultParameters, size: u64) -> bool {
     let world = self.world_dispatcher.read();
     let core_actions = get_core_actions(world);
@@ -101,7 +101,7 @@ fn ownerless_space(self: @ContractState, default_params: DefaultParameters, size
 
 ## Test
 Test code is gonna be like this:
-```rust
+```rust,ignore
 fn test_create_minefield() {
     // Deploy everything
     let (world, core_actions, minesweeper_actions) = deploy_world();

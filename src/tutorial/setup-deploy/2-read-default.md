@@ -9,7 +9,7 @@ We need interface. As a default, we use this.
 - interace: the contract interact with cores system.
 - fade: original function for app_template/paint game. If you want to create your specific function, please implement like this.
 
-```rust
+```rust,ignore
 #[starknet::interface]
 trait IMyAppActions<TContractState> {
     fn init(self: @TContractState);
@@ -19,7 +19,7 @@ trait IMyAppActions<TContractState> {
 ```
 
 As a default parameters, we use this for now.
-```rust
+```rust,ignore
 #[derive(Copy, Drop, Serde, SerdeLen)]
 struct DefaultParameters {
     for_player: ContractAddress,
@@ -32,13 +32,13 @@ struct DefaultParameters {
 ### Init function
 
 We need to call `update_app` for initializing application.
-```rust
+```rust,ignore
 core_actions.update_app(APP_KEY, APP_ICON, APP_MANIFEST)
 ```
 
 Also, we can set the permissions for another applications.
 
-```rust
+```rust,ignore
 core_actions
     .update_permission(
         'snake',
@@ -58,7 +58,7 @@ core_actions
 
 By calling `core_actions.update_pixel()`, we can update pixels wiht our logic.
 
-```rust
+```rust,ignore
 // logic or assertion
 core_actions
     .update_pixel(
@@ -83,7 +83,7 @@ core_actions
 As same as interact function, we can update pixels.
 
 Here, we use `core_actions.schedule_queue()` instead of `core_actions.update_pixels()` to use queue system.
-```rust
+```rust,ignore
 core_actions
     .schedule_queue(
         queue_timestamp, // When to fade next
@@ -94,6 +94,6 @@ core_actions
 ```
 
 We use queue_timestamp to handle the time when the queued transaction is executed.
-```rust
+```rust,ignore
 let queue_timestamp = starknet::get_block_timestamp() + FADE_SECONDS;
 ```

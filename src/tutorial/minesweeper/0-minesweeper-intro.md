@@ -7,7 +7,7 @@ We need following functions:
 - ownerless_space: 
 
 We can write interface like this:
-```rust
+```rust,ignore
 #[starknet::interface]
 trait IMinesweeperActions<TContractState> {
     fn init(self: @TContractState);
@@ -20,7 +20,7 @@ trait IMinesweeperActions<TContractState> {
 
 ### Set constants
 We set some constants. We added `GAME_MAX_DURATION` to avoid parmanent sessions.
-```rust
+```rust,ignore
 /// APP_KEY must be unique across the entire platform
 const APP_KEY: felt252 = 'minesweeper';
 
@@ -40,7 +40,7 @@ We used [this](http://xahlee.info/comp/unicode_index.html?q=bom) to search the u
 
 We use State and Game. State represents statement of pixel in minesweeper, and Game struct handle the components for this game.
 
-```rust
+```rust,ignore
 #[derive(Serde, Copy, Drop, PartialEq, Introspect)]
 enum State {
     None: (),
@@ -65,14 +65,14 @@ struct Game {
 
 ### Import them
 Don't forget to import them.
-```rust
+```rust,ignore
 use super::{Game, State};
 use super::{APP_KEY, APP_ICON, APP_MANIFEST, GAME_MAX_DURATION};
 ```
 
 ### Set up functions
 In `ActionsImpl`, please declare functions.
-```rust
+```rust,ignore
 #[dojo::contract]
 mod minesweeper_actions {
     /// ...

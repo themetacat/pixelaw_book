@@ -1,6 +1,6 @@
 ## Write fn init()
 Same as default.
-```rust
+```rust,ignore
 fn init(self: @ContractState) {
     let world = self.world_dispatcher.read();
     let core_actions = pixelaw::core::utils::get_core_actions(world);
@@ -35,7 +35,7 @@ fn init(self: @ContractState) {
 ### Write a draft of fn interact()
 
 Initially, load some information
-```rust
+```rust,ignore
 let caller_address = get_caller_address();
 let mut game = get!(world, (position.x, position.y), (Game));
 let timestamp = starknet::get_block_timestamp();
@@ -43,7 +43,7 @@ let timestamp = starknet::get_block_timestamp();
 
 We call this `interact()` function when we click pixels. So, we use `pixel.alert` to call functions.
 
-```rust
+```rust,ignore
 if pixel.alert = 'reveal' {
     // call reveal function
     self.reveal(default_params);
@@ -61,7 +61,7 @@ if pixel.alert = 'reveal' {
 ### Implement function when we start game
 If `self.ownerless_space()` returns true, we can start new game. Let's start new game.
 
-```rust
+```rust,ignore
 let mut id = world.uuid();
 
 // set game information
@@ -118,7 +118,7 @@ loop {
 ```
 
 Then, set mines.
-```rust
+```rust,ignore
 let mut num_mines = 0;
 loop {
     if num_mines >= mines_amount {
@@ -157,7 +157,7 @@ loop {
 ```
 
 ### Whole code in `minesweeper_actions` is like this
-```rust
+```rust,ignore
 #[dojo::contract]
 /// contracts must be named as such (APP_KEY + underscore + "actions")
 mod minesweeper_actions {
@@ -435,7 +435,7 @@ mod minesweeper_actions {
 
 ### Test so far
 Please do not foget adding grant_writer:
-```rust
+```rust,ignore
 world.grant_writer('Game',minesweeper_actions_address);
 ```
 
