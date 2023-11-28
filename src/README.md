@@ -6,7 +6,7 @@
 
 PixeLAW is an anutonomous pixel playground built using [Cairo](https://github.com/starkware-libs/cairo) and [Dojo](https://github.com/dojoengine/dojo). PixeLAW has a core layer so that builders can create their own applications top of it. These apps share states and interact each other.
 
-This book is dedicated to familiarizing you with PixeLAW and its potential. A special section on the [Theory](./theory/autonomous-world.md) elucidates this emergent concept of autonomous worlds.
+This book is dedicated to familiarizing you with PixeLAW and its potential. A special section on the [Theory](./theory/autonomous-worlds.md) elucidates this emergent concept of autonomous worlds.
 
 - [Quickstart](./getting-started/quick-start.md)
 - [What is PixeLAW?](./theory/what-is-pixelaw.md)
@@ -18,4 +18,4 @@ Video will be provided here.
 
 ### How do I get involved?
 
-Check out our [Github](https://github.com/pixelaw/), our [Twitter](https://twitter.com/0xPixeLAW), [Discord](https://t.co/jKDjNbFdZ5) and contribution guide.
+Check out our [Github](https://github.com/pixelaw/), [Twitter](https://twitter.com/0xPixeLAW), [Discord](https://t.co/jKDjNbFdZ5) and contribution guide.
