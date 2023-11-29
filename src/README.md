@@ -8,9 +8,11 @@ PixeLAW is an anutonomous pixel playground built using [Cairo](https://github.co
 
 This book is dedicated to familiarizing you with PixeLAW and its potential. A special section on the [Theory](./theory/autonomous-worlds.md) elucidates this emergent concept of autonomous worlds.
 
+The main contents are as follows.
 - [Quickstart](./getting-started/quick-start.md)
 - [What is PixeLAW?](./theory/what-is-pixelaw.md)
 - [Explore the Architecture](./architecture/overview.md)
+- [Tutorial with Minesweeper](./tutorial/minesweeper/README.md)
 
 ### Explainer
 

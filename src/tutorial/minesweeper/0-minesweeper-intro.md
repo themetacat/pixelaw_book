@@ -1,4 +1,4 @@
-#s## Functions
+### Functions
 We need following functions:
 - init: initialize application settings.
 - interact: interact with PixeLAW field. When we start game, we call this function to set up field.
