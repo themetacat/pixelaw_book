@@ -139,4 +139,4 @@ sozo test
 ```
 
 ## Deploy
-After this, please deploy by following [this](../setup-deploy/2-read-default.md)
+After this, please deploy by following [this](../setup-deploy/README.md)
