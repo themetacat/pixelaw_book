@@ -12,7 +12,7 @@ The main contents are as follows.
 - [Quickstart](./getting-started/quick-start.md)
 - [What is PixeLAW?](./theory/what-is-pixelaw.md)
 - [Explore the Architecture](./architecture/overview.md)
-- [Tutorial with Minesweeper](./tutorial/minesweeper/README.md)
+- [Tutorial](./tutorial/setup-deploy/README.md)
 
 ### Explainer
 
