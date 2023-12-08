@@ -11,12 +11,10 @@
 
 - [Quick Start](./getting-started/quick-start.md)
   - [Development Setup](./getting-started/setup.md)
-  - [Contributing](./getting-started/contributing.md)
 
-# Community
+# Community&Contribution
 
-- [Get Started](./community/get-started.md)
-
+- [Get Started](./cc/get-started.md)
 
 # Architecture
 
