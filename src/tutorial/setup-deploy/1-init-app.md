@@ -61,7 +61,7 @@ For zsh users,
 scarb run upload_manifest_zsh
 ````
 
-## Deploying to Demo
+## Deploying to Demo {#deploy_to_demo}
 Deploying to demo is almost the same as local development. The only difference is needing
 the RPC_URL of the Demo environment as well as the DEMO_URL (NOTE: this must end in a slash i.e. '/')
 of the Demo App to upload your manifest to. Both URLs can be provided by us. Please reach out through [Discord](https://t.co/jKDjNbFdZ5).
