@@ -14,7 +14,7 @@ The main contents are as follows.
 - [Quickstart](./getting-started/quick-start.md)
     - [Build a PixeLAW APP](../src/build-app/1-build-app.md)
 - [PixeLAW Architecture](./architecture/overview.md)
-- [App Tutorial](../src/app-tutorials/README.md)
+- [App Tutorial](../src/app-tutorials/tutorials.md)
 
 ### How do I get involved?
 
