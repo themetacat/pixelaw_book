@@ -17,4 +17,4 @@
 - [Overview](./architecture/overview.md)
 
  # App Tutorials
-- [Minesweeper](./app-tutorials/README.md)
+- [Minesweeper](./app-tutorials/index.)
