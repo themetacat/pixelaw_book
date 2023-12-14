@@ -1,10 +1,5 @@
 # Summary
 - [Foreword](./README.md)
-  - [What is PixeLAW?](./theory/what-is-pixelaw.md)
-  - [AW Theory](./theory/autonomous-worlds.md)
-  - [Cairo Ecosystem](./theory/cairo.md)
-  - [Dojo Ecosystem](./theory/dojo.md)
-  - [FAQs](./theory/faqs.md)
 
 # Getting Started
 - [Quick Start](./getting-started/quick-start.md)

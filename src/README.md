@@ -12,7 +12,7 @@ When reading this book, you are on your way to become a Pixel World Builder.
 
 The main contents are as follows.
 - [Quickstart](./getting-started/quick-start.md)
- - [Build a PixeLAW APP](./build-app/1-build-app.md)
+    - [Build a PixeLAW APP](./build-app/1-build-app.md)
 - [PixeLAW Architecture](./architecture/overview.md)
 - [App Tutorial](./app-tutorials/README.md)
 
