@@ -10,13 +10,10 @@ This book is dedicated to familiarizing you with PixeLAW and its potential. A sp
 
 The main contents are as follows.
 - [Quickstart](./getting-started/quick-start.md)
+ - [Build a PixeLAW APP](./build-app/1-build-app.md)
 - [What is PixeLAW?](./theory/what-is-pixelaw.md)
 - [Explore the Architecture](./architecture/overview.md)
-- [Tutorial](./tutorial/readme.md)
-
-### Explainer
-
-Video will be provided here.
+- [Tutorial](./app-tutorials/README.md)
 
 ### How do I get involved?
 
