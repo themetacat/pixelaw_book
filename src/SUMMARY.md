@@ -8,7 +8,7 @@
 
 # Getting Started
 - [Quick Start](./getting-started/quick-start.md)
-  - [Development Setup](./build-app/1-build-app.md)
+  - [Build a PixeLAW App](./build-app/1-build-app.md)
 
 # Community&Contribution
 - [Get Started](./cc/get-started.md)

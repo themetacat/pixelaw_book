@@ -7,15 +7,15 @@
 Lets check out the folder structure first of the [App Template](https://github.com/pixelaw/app_template/tree/main):
 
 - **`app_template/src` contains all your cairo contracts.**
- - `src/app.cairo` contains your apps core logic.
- - `src/lib.cairo` contains a module declaration.
- - `src/tests.cairo` contains your tests.
+  - `src/app.cairo` contains your app's core logic.
+  - `src/lib.cairo` contains a module declaration.
+  - `src/tests.cairo` contains your tests.
 - `app_template/scripts` contains scripts for deployment.
- - `scripts/default_auth.sh` provides necessary authorization and writer permission to your app.
- - `scripts/upload_manifest.sh` upload your manifest.json required by the front-end
- - `scripts/ready_for_deployment.sh` helper script used to notify final docker deployment.
+  - `scripts/default_auth.sh` provides necessary authorization and writer permission to your app.
+  - `scripts/upload_manifest.sh` uploads your manifest.json required by the front-end.
+  - `scripts/ready_for_deployment.sh` is a helper script used to notify final docker deployment.
 - `app_template/scarb.toml` specifies all dependencies.
-- `app_template/docker-compose.yml` required for docker compose.
+- `app_template/docker-compose.yml` required for docker compose
 
 The default App Template includes the contract code of the Paint App which allows users to paint any pixel with any color.
 
@@ -121,7 +121,7 @@ Additionally, we provide the permission to another app called Snake to interact 
 ```
 Now that we get to the interact function, which is called by default by the front end unless otherwise specified. 
 
-Most importantly it calls the `core_actions.update_pixel` to change the color of a pixel that has been clicked..
+Most importantly it calls the `core_actions.update_pixel` to change the color of a pixel that has been clicked.
 
 ```rust,ignore
         /// Put color on a certain position
