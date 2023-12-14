@@ -1,7 +1,7 @@
 # Quick Start
 
 ## Deploy the Pixel Core locally
-Everything in PixeLAW starts with the core pixel layer into which you will deploy your own app.
+Everything in PixeLAW starts with the [core pixel layer](https://github.com/pixelaw/core) into which you will deploy your own app.
 
 Let's get started by deploying the core pixel layer, which includes both the contracts and the PixeLAW front-end.
 
@@ -12,8 +12,6 @@ Please go to [app_template](https://github.com/pixelaw/app_template). And clone 
 ```console
 git clone https://github.com/pixelaw/app_template.git app_template
 ```
-
-#test
 
 ## Prerequisites
 
@@ -45,17 +43,16 @@ For convenience, you can run the following script that will print out "Ready for
 scarb run ready_for_deployment
 ```
 
-After some time (around approx. 10 minutes) you should be able to see PixeLAW running on http://localhost:3000. There is a docker-compose file in this repository specifically for running a local image of PixeLAW core. Wait until http://localhost:3000/manifests/core stops returning NOT FOUND. 
+After some time (around 1 minute) you should be able to see PixeLAW running on http://localhost:3000. There is a docker-compose file in this repository specifically for running a local image of PixeLAW core. Wait until http://localhost:3000/manifests/core stops returning NOT FOUND.
 
+You should be able to see PixeLAW in its true glory: ![PixelCore](../images/PixelCore.png)
 
+If you run into any issues you can check out the [github repo](https://github.com/pixelaw/app_template/tree/main), and check out alternatives to deploy the core.
 
+## Next Step
 
+Awesome, you just successfully deployed the Pixel Core. 
 
-Awesome, you just successfully build your own PixeLAW App! If you fail, please read [app_template README](https://github.com/pixelaw/app_template) to see another way to deploy. Or you can check [here](./setup_old.md).
+The next step should be for you to build your own PixeLAW App. We will remain in the `app_template` repo.
 
-## Next Steps
-
-The guide above should be enough to get your app ready on local. The next step would be:
-- Deploy your app to https://demo.pixelaw.xyz/ [here]({#deploy_to_demo}).
-- Check out [tutorials](../tutorial) of other PixeLAW Apps.
-- Check out the [PixeLAW Core](https://github.com/pixelaw/core).
+Go and be a Pixel Builder and [deploy your own App to the core](../build-app/build-app.md)!
