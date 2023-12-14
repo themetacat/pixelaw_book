@@ -1,10 +1,9 @@
-# Quick Start: Build your own PixeLAW App
+# Quick Start
 
 ## Deploy the Pixel Core locally
 Everything in PixeLAW starts with the core pixel layer into which you will deploy your own app.
 
-Let's get started by both deploying the core pixel layer, and the app from the app_template locally.
-
+Let's get started by deploying the core pixel layer, which includes both the contracts and the PixeLAW front-end.
 
 ## Clone app_template
 
@@ -37,43 +36,18 @@ In order to simplify deploying PixeLAW locally, we created a docker container wi
 docker compose up -d
 ```
 
+## Wait for the Core to be deployed (Optional)
+
+For convenience, you can run the following script that will print out "Ready for app deployment", once contracts fully initialised:
+```console
+scarb run ready_for_deployment
+```
+
 After some time (around approx. 10 minutes) you should be able to see PixeLAW running on http://localhost:3000. There is a docker-compose file in this repository specifically for running a local image of PixeLAW core. Wait until http://localhost:3000/manifests/core stops returning NOT FOUND. 
 
-## Deploy your own App to the Pixel Core
 
-Now that you have deployed the pixel core, you are ready to build and migrate your own contracts in `app_template/src`.
 
-- `src/app.cairo` contains your apps core logic.
-- `src/lib.cairo` contains a module declaration.
-- `src/tests.cairo` contains your tests.
 
-### Building your contracts
-
-Run the following to compile the cairo contracts, generating the necessary artifacts for deployment.
-```console
-sozo build
-```
-
-### Migrate/Deploy your App
-
-This will deploy your contracts to the local PixeLAW world.
-```console
-sozo migrate --name pixelaw
-```
-
-### Initialise your App
-
-This will run `scripts/default_auth.sh` and provide necessary authorization and writer permission to your app.
-```console
-scarb run initialize
-```
-
-### Uploading your manifest
-
-This will run `scripts/upload_manifest.sh` and upload your manifest.json required by the front-end.
-```console
-scarb run upload_manifest
-```
 
 Awesome, you just successfully build your own PixeLAW App! If you fail, please read [app_template README](https://github.com/pixelaw/app_template) to see another way to deploy. Or you can check [here](./setup_old.md).
 
