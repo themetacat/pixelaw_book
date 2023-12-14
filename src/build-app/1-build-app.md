@@ -174,11 +174,11 @@ Most importantly it calls the `core_actions.update_pixel` to change the color of
 }
 ```
 
-The above specifies the same functionality like our Paint App. Feel free to [deploy it locally](2-deploy-app.md), make changes and try it out.
+The above specifies the same functionality like our Paint App. Feel free to [deploy it locally](./2-deploy-app.md), make changes and try it out.
 
 ## Next Steps
 
 The guide above should get you familiar with how the Paint App is structured. The next step would be to:
-- [Deploy your app](2-deploy-app.md) to the front-end.
+- [Deploy your app](./2-deploy-app.md) to the front-end.
 - Check out other [tutorials](../tutorial) of other PixeLAW Apps.
 - Check out the [PixeLAW Core](https://github.com/pixelaw/core).
