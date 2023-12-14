@@ -12,4 +12,4 @@
 - [Overview](./architecture/overview.md)
 
  # App Tutorials
-- [Minesweeper](./app-tutorials/index.)
+- [Minesweeper](./app-tutorials/tutorials.md)
