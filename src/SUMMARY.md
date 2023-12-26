@@ -14,3 +14,6 @@
 
  # App Tutorials
 - [Minesweeper](./app-tutorials/tutorials.md)
+  - [Introduction](./app-tutorials/minesweeper/0-minesweeper-intro.md)
+  - [Init and Interact](./app-tutorials/minesweeper/1-init-and-interact.md)
+  - [Implement the rest](./app-tutorials/minesweeper/2-implement-rest.md)
