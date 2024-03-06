@@ -4,7 +4,7 @@
 
 ## PixeLAW: Autonomous Pixel Playground
 
-PixeLAW is an anutonomous pixel playground built using [Cairo](https://book.cairo-lang.org/) and [Dojo](https://book.dojoengine.org/) on top of [Starknet](https://book.starknet.io/). PixeLAW has a core layer so that builders can create their own applications top of it. These apps share states and interact each other.
+PixeLAW is an anutonomous pixel playground, there are two implementations, one is built using [Cairo](https://book.cairo-lang.org/) and [Dojo](https://book.dojoengine.org/) on top of [Starknet](https://book.starknet.io/), another is built using [Solidity](https://soliditylang.org/) and [MUD](https://mud.dev/). PixeLAW has a core layer so that builders can create their own applications top of it. These apps share states and interact each other.
 
 This book is dedicated to familiarizing you with PixeLAW and its [vision](https://medium.com/@syora/discovering-pixelaw-the-fully-onchain-planet-ac5e8bb40dfb) to create an [autonomous world](https://book.dojoengine.org/theory/autonomous-worlds.html).
 
