@@ -34,12 +34,12 @@ After some time (around 10 minute) you should be able to see PixeLAW running on 
 
 You should be able to see PixeLAW in its true glory: ![PixelCore](../images/PixelCore.png)
 
-If you run into any issues you can check out the [github repo](https://github.com/pixelaw/app_template/tree/main), and check out [start.sh](https://github.com/themetacat/pixelaw_core/blob/main/start.sh) to see the build and deploy details.
+If you run into any issues you can check out the [github repo](https://github.com/pixelaw/app_template/tree/main), and read [start.sh](https://github.com/themetacat/pixelaw_core/blob/main/start.sh) to see the build and deploy details.
 
 ## Next Step
 
 Awesome, you just successfully deployed the Pixel Core. 
 
-The next step should be for you to build your own PixeLAW App. We will remain in the `app_template` repo.
+The next step should be for you to build your own PixeLAW App. We will remain in the `app_template_mud` repo.
 
 Go and be a Pixel Builder and [deploy your own App to the core](../build-app/build-app-mud.md)!
