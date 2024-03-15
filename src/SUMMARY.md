@@ -4,11 +4,11 @@
 # Getting Started
 - [Quick Start](./getting-started/quick-start.md)
   - [For Dojo](./getting-started/quick-start.md)
-	  - [Build a PixeLAW App](./build-app/1-build-app.md)
-	  - [Deploy a PixeLAW App](./build-app/2-deploy-app.md)
+    - [Build a PixeLAW App](./build-app/1-build-app.md)
+    - [Deploy a PixeLAW App](./build-app/2-deploy-app.md)
   - [For MUD](./getting-started/quick-start-mud.md)
-	  - [Build a PixeLAW App](./build-app/1-build-app-mud.md)
-	  - [Deploy a PixeLAW App](./build-app/2-deploy-app-mud.md)
+    - [Build a PixeLAW App](./build-app/1-build-app-mud.md)
+    - [Deploy a PixeLAW App](./build-app/2-deploy-app-mud.md)
 
 # Community&Contribution
 - [Get Started](./cc/get-started.md)
