@@ -1,4 +1,4 @@
-# Quick Start
+# Quick Start(For Dojo)
 
 ## Deploy the Pixel Core locally
 Everything in PixeLAW starts with the [core pixel layer](https://github.com/pixelaw/core) into which you will deploy your own app.
