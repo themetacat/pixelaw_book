@@ -89,9 +89,11 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting Started</li><li class="chapter-item expanded "><a href="getting-started/quick-start.html"><strong aria-hidden="true">2.</strong> Quick Start</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/quick-start.html"><strong aria-hidden="true">2.1.</strong> For Dojo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="build-app/1-build-app.html"><strong aria-hidden="true">2.1.1.</strong> Build a PixeLAW App</a></li><li class="chapter-item expanded "><a href="build-app/2-deploy-app.html"><strong aria-hidden="true">2.1.2.</strong> Deploy a PixeLAW App</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started/quick-start-mud.html"><strong aria-hidden="true">2.2.</strong> For MUD</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="build-app/1-build-app-mud.html"><strong aria-hidden="true">2.2.1.</strong> Build a PixeLAW App</a></li><li class="chapter-item expanded "><a href="build-app/2-deploy-app-mud.html"><strong aria-hidden="true">2.2.2.</strong> Deploy a PixeLAW App</a></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Community&Contribution</li><li class="chapter-item expanded "><a href="cc/get-started.html"><strong aria-hidden="true">3.</strong> Get Started</a></li><li class="chapter-item expanded affix "><li class="part-title">Architecture</li><li class="chapter-item expanded "><a href="architecture/overview.html"><strong aria-hidden="true">4.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">App Tutorials</li><li class="chapter-item expanded "><a href="app-tutorials/tutorials.html"><strong aria-hidden="true">5.</strong> Minesweeper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app-tutorials/minesweeper/0-minesweeper-intro.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="app-tutorials/minesweeper/1-init-and-interact.html"><strong aria-hidden="true">5.2.</strong> Init and Interact</a></li><li class="chapter-item expanded "><a href="app-tutorials/minesweeper/2-implement-rest.html"><strong aria-hidden="true">5.3.</strong> Implement the rest</a></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -146,6 +148,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/pixelaw/book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -172,7 +177,1027 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+                        <p><img src="images/PixeLAW.jpeg" alt="PixeLAW" /></p>
+<hr />
+<h2 id="pixelaw-autonomous-pixel-playground"><a class="header" href="#pixelaw-autonomous-pixel-playground">PixeLAW: Autonomous Pixel Playground</a></h2>
+<p><a href="https://www.pixelaw.xyz/">PixeLAW</a> is an anutonomous pixel playground, there are two implementations, <a href="https://dojo.pixelaw.xyz/">one</a> is built using <a href="https://book.cairo-lang.org/">Cairo</a> and <a href="https://book.dojoengine.org/">Dojo</a> on top of <a href="https://book.starknet.io/">Starknet</a>, <a href="https://mud.pixelaw.xyz/">another</a> is built using <a href="https://soliditylang.org/">Solidity</a> and <a href="https://mud.dev/">MUD</a> on top of <a href="https://redstone.xyz/">Redstone</a>. <a href="https://www.pixelaw.xyz/">PixeLAW</a> has a core layer so that builders can create their own applications top of it. These apps share states and interact each other.</p>
+<p>This book is dedicated to familiarizing you with PixeLAW and its <a href="https://medium.com/@syora/discovering-pixelaw-the-fully-onchain-planet-ac5e8bb40dfb">vision</a> to create an <a href="https://book.dojoengine.org/theory/autonomous-worlds.html">autonomous world</a>.</p>
+<p>When reading this book, you are on your way to become a Pixel World Builder.</p>
+<p>The main contents are as follows.</p>
+<ul>
+<li><a href="./getting-started/quick-start.html">Quickstart</a>
+<ul>
+<li><a href="./build-app/1-build-app.html">Build a PixeLAW APP</a></li>
+</ul>
+</li>
+<li><a href="./architecture/overview.html">PixeLAW Architecture</a></li>
+<li><a href="./app-tutorials/tutorials.html">App Tutorial</a></li>
+</ul>
+<h3 id="how-do-i-get-involved"><a class="header" href="#how-do-i-get-involved">How do I get involved?</a></h3>
+<p>Check out our <a href="https://github.com/pixelaw/">Github</a>, <a href="https://twitter.com/0xPixeLAW">Twitter</a>, <a href="https://t.co/jKDjNbFdZ5">Discord</a> and contribution guide.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quick-startfor-dojo"><a class="header" href="#quick-startfor-dojo">Quick Start(For Dojo)</a></h1>
+<h2 id="deploy-the-pixel-core-locally"><a class="header" href="#deploy-the-pixel-core-locally">Deploy the Pixel Core locally</a></h2>
+<p>Everything in PixeLAW starts with the <a href="https://github.com/pixelaw/core">core pixel layer</a> into which you will deploy your own app.</p>
+<p>Let's get started by deploying the core pixel layer, which includes both the contracts and the PixeLAW front-end.</p>
+<h2 id="clone-app_template"><a class="header" href="#clone-app_template">Clone app_template</a></h2>
+<p>Please go to <a href="https://github.com/pixelaw/app_template">app_template</a>. And clone it.</p>
+<pre><code class="language-console">git clone https://github.com/pixelaw/app_template.git app_template
+</code></pre>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<p>Download these libraries.</p>
+<ul>
+<li>Dojo - install <a href="https://book.dojoengine.org/getting-started/quick-start.html">here</a></li>
+<li>Scarb - install <a href="https://docs.swmansion.com/scarb/download">here</a></li>
+<li>Docker - install <a href="https://docs.docker.com/engine/install/">here</a></li>
+<li>Docker compose plugin - install <a href="https://docs.docker.com/compose/install/">here</a></li>
+</ul>
+<h2 id="run-your-own-tests"><a class="header" href="#run-your-own-tests">Run your own tests</a></h2>
+<p>To make sure everything is working correctly, run the following command to run tests:</p>
+<pre><code class="language-console">sozo test
+</code></pre>
+<h2 id="deploy-the-pixel-core"><a class="header" href="#deploy-the-pixel-core">Deploy the Pixel Core</a></h2>
+<p>In order to simplify deploying PixeLAW locally, we created a docker container with all dependencies. Simply run this command in the <code>app_template</code> folder:</p>
+<pre><code class="language-console">docker compose up -d
+</code></pre>
+<h2 id="wait-for-the-core-to-be-deployed-optional"><a class="header" href="#wait-for-the-core-to-be-deployed-optional">Wait for the Core to be deployed (Optional)</a></h2>
+<p>For convenience, you can run the following script that will print out "Ready for app deployment", once contracts fully initialised:</p>
+<pre><code class="language-console">scarb run ready_for_deployment
+</code></pre>
+<p>After some time (around 1 minute) you should be able to see PixeLAW running on http://localhost:3000. There is a docker-compose file in this repository specifically for running a local image of PixeLAW core. Wait until http://localhost:3000/manifests/core stops returning NOT FOUND.</p>
+<p>You should be able to see PixeLAW in its true glory: <img src="getting-started/../images/PixelCore.png" alt="PixelCore" /></p>
+<p>If you run into any issues you can check out the <a href="https://github.com/pixelaw/app_template/tree/main">github repo</a>, and check out alternatives to deploy the core.</p>
+<h2 id="next-step"><a class="header" href="#next-step">Next Step</a></h2>
+<p>Awesome, you just successfully deployed the Pixel Core.</p>
+<p>The next step should be for you to build your own PixeLAW App. We will remain in the <code>app_template</code> repo.</p>
+<p>Go and be a Pixel Builder and <a href="getting-started/../build-app/build-app.html">deploy your own App to the core</a>!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quick-startfor-dojo-1"><a class="header" href="#quick-startfor-dojo-1">Quick Start(For Dojo)</a></h1>
+<h2 id="deploy-the-pixel-core-locally-1"><a class="header" href="#deploy-the-pixel-core-locally-1">Deploy the Pixel Core locally</a></h2>
+<p>Everything in PixeLAW starts with the <a href="https://github.com/pixelaw/core">core pixel layer</a> into which you will deploy your own app.</p>
+<p>Let's get started by deploying the core pixel layer, which includes both the contracts and the PixeLAW front-end.</p>
+<h2 id="clone-app_template-1"><a class="header" href="#clone-app_template-1">Clone app_template</a></h2>
+<p>Please go to <a href="https://github.com/pixelaw/app_template">app_template</a>. And clone it.</p>
+<pre><code class="language-console">git clone https://github.com/pixelaw/app_template.git app_template
+</code></pre>
+<h2 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h2>
+<p>Download these libraries.</p>
+<ul>
+<li>Dojo - install <a href="https://book.dojoengine.org/getting-started/quick-start.html">here</a></li>
+<li>Scarb - install <a href="https://docs.swmansion.com/scarb/download">here</a></li>
+<li>Docker - install <a href="https://docs.docker.com/engine/install/">here</a></li>
+<li>Docker compose plugin - install <a href="https://docs.docker.com/compose/install/">here</a></li>
+</ul>
+<h2 id="run-your-own-tests-1"><a class="header" href="#run-your-own-tests-1">Run your own tests</a></h2>
+<p>To make sure everything is working correctly, run the following command to run tests:</p>
+<pre><code class="language-console">sozo test
+</code></pre>
+<h2 id="deploy-the-pixel-core-1"><a class="header" href="#deploy-the-pixel-core-1">Deploy the Pixel Core</a></h2>
+<p>In order to simplify deploying PixeLAW locally, we created a docker container with all dependencies. Simply run this command in the <code>app_template</code> folder:</p>
+<pre><code class="language-console">docker compose up -d
+</code></pre>
+<h2 id="wait-for-the-core-to-be-deployed-optional-1"><a class="header" href="#wait-for-the-core-to-be-deployed-optional-1">Wait for the Core to be deployed (Optional)</a></h2>
+<p>For convenience, you can run the following script that will print out "Ready for app deployment", once contracts fully initialised:</p>
+<pre><code class="language-console">scarb run ready_for_deployment
+</code></pre>
+<p>After some time (around 1 minute) you should be able to see PixeLAW running on http://localhost:3000. There is a docker-compose file in this repository specifically for running a local image of PixeLAW core. Wait until http://localhost:3000/manifests/core stops returning NOT FOUND.</p>
+<p>You should be able to see PixeLAW in its true glory: <img src="getting-started/../images/PixelCore.png" alt="PixelCore" /></p>
+<p>If you run into any issues you can check out the <a href="https://github.com/pixelaw/app_template/tree/main">github repo</a>, and check out alternatives to deploy the core.</p>
+<h2 id="next-step-1"><a class="header" href="#next-step-1">Next Step</a></h2>
+<p>Awesome, you just successfully deployed the Pixel Core.</p>
+<p>The next step should be for you to build your own PixeLAW App. We will remain in the <code>app_template</code> repo.</p>
+<p>Go and be a Pixel Builder and <a href="getting-started/../build-app/build-app.html">deploy your own App to the core</a>!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="build-your-first-pixel-app"><a class="header" href="#build-your-first-pixel-app">Build your first Pixel App</a></h1>
+<blockquote>
+<p><strong><em>REQUIRED:</em></strong> To create your own application in PixeLAW, you must have <a href="build-app/../getting-started/quick-start.html">set up the PixeLAW Core</a> environment locally.</p>
+</blockquote>
+<h2 id="pixelaw-in-15-minutes"><a class="header" href="#pixelaw-in-15-minutes">PixeLAW in 15 minutes</a></h2>
+<p>Lets check out the folder structure first of the <a href="https://github.com/pixelaw/app_template/tree/main">App Template</a>:</p>
+<ul>
+<li><strong><code>app_template/src</code> contains all your cairo contracts.</strong>
+<ul>
+<li><code>src/app.cairo</code> contains your app's core logic.</li>
+<li><code>src/lib.cairo</code> contains a module declaration.</li>
+<li><code>src/tests.cairo</code> contains your tests.</li>
+</ul>
+</li>
+<li><code>app_template/scripts</code> contains scripts for deployment.
+<ul>
+<li><code>scripts/default_auth.sh</code> provides necessary authorization and writer permission to your app.</li>
+<li><code>scripts/upload_manifest.sh</code> uploads your manifest.json required by the front-end.</li>
+<li><code>scripts/ready_for_deployment.sh</code> is a helper script used to notify final docker deployment.</li>
+</ul>
+</li>
+<li><code>app_template/scarb.toml</code> specifies all dependencies.</li>
+<li><code>app_template/docker-compose.yml</code> required for docker compose</li>
+</ul>
+<p>The default App Template includes the contract code of the Paint App which allows users to paint any pixel with any color.</p>
+<p>You can either directly <a href="build-app/2-deploy-app.html">deploy it to the Core</a> or adjust the code as you see fit.</p>
+<p>Let's dive into the code of the <a href="https://github.com/pixelaw/app_template/tree/main">App Template</a>.</p>
+<h3 id="imports"><a class="header" href="#imports">Imports</a></h3>
+<p>At first we require certain imports from the core to enable our paint app. Depending on your use case you might require different imports. Refer to the <a href="https://github.com/pixelaw/core">Pixel Core</a>, other <a href="https://github.com/pixelaw/examples">App examples</a> or talk to us on <a href="https://t.co/jKDjNbFdZ5">Discord</a>.</p>
+<pre><code class="language-rust ignore">use dojo::world::{IWorldDispatcher, IWorldDispatcherTrait};
+use pixelaw::core::models::pixel::{Pixel, PixelUpdate};
+use pixelaw::core::utils::{get_core_actions, Direction, Position, DefaultParameters};
+use starknet::{get_caller_address, get_contract_address, get_execution_info, ContractAddress};</code></pre>
+<h3 id="interface"><a class="header" href="#interface">Interface</a></h3>
+<p>In the interface we prototype our functions and expose them publicly. <strong>Every PixeLAW App requires the init and interact function.</strong> The init functions adds your App to the world registry, whereas the interact function defines the default functionality of your app. The core will by default call the interact function of your app.</p>
+<p>The DefaultParameters parameter is a convention we use to input all pixel-related information to the function.</p>
+<pre><code class="language-rust ignore">#[starknet::interface]
+trait IMyAppActions&lt;TContractState&gt; {
+    fn init(self: @TContractState);
+    fn interact(self: @TContractState, default_params: DefaultParameters);
+}</code></pre>
+<h3 id="declaring-your-app"><a class="header" href="#declaring-your-app">Declaring your App</a></h3>
+<ol>
+<li>
+<p>The <strong>APP_KEY</strong> is the unique username of your app, and has to be the same across the entire platform.</p>
+</li>
+<li>
+<p>The <strong>APP_ICON</strong> will define the icon shown on the front-end to select your app.</p>
+</li>
+<li>
+<p>The <strong>APP_MANIFEST</strong> simply has to be adjusted according to your APP_KEY.</p>
+</li>
+</ol>
+<pre><code class="language-rust ignore">/// APP_KEY must be unique across the entire platform
+const APP_KEY: felt252 = 'myapp';
+/// Core only supports unicode icons for now
+const APP_ICON: felt252 = 'U+263A';
+/// prefixing with BASE means using the server's default manifest.json handler
+const APP_MANIFEST: felt252 = 'BASE/manifests/myapp';</code></pre>
+<h3 id="app-contract"><a class="header" href="#app-contract">App Contract</a></h3>
+<pre><code class="language-rust ignore">#[dojo::contract]
+///PixeLAW Naming Convention: contracts must be named as such (APP_KEY + underscore + "actions")
+mod myapp_actions {
+    use starknet::{
+        get_tx_info, get_caller_address, get_contract_address, get_execution_info, ContractAddress
+    };
+    use super::IMyAppActions;
+    use pixelaw::core::models::pixel::{Pixel, PixelUpdate};
+
+    use pixelaw::core::models::permissions::{Permission};
+    use pixelaw::core::actions::{
+        IActionsDispatcher as ICoreActionsDispatcher,
+        IActionsDispatcherTrait as ICoreActionsDispatcherTrait
+    };
+    use super::{APP_KEY, APP_ICON, APP_MANIFEST};
+    use pixelaw::core::utils::{get_core_actions, Direction, Position, DefaultParameters};
+
+    use debug::PrintTrait;</code></pre>
+<p>Below we continue with function implementations.</p>
+<p>As mentioned above, the <code>init</code> and <code>interact</code> function are required for any PixeLAW App.</p>
+<p>Additionally, we provide the permission to another app called Snake to interact with any Pixel occupied by our app.</p>
+<pre><code class="language-rust ignore">    // impl: implement functions specified in trait
+    #[external(v0)]
+    impl ActionsImpl of IMyAppActions&lt;ContractState&gt; {
+        /// Initialize the MyApp App
+        fn init(self: @ContractState) {
+            let world = self.world_dispatcher.read();
+            let core_actions = pixelaw::core::utils::get_core_actions(world);
+
+            //add app to the world registry
+            core_actions.update_app(APP_KEY, APP_ICON, APP_MANIFEST);
+            //Grant permission to the snake App
+            core_actions
+                .update_permission(
+                    'snake',
+                    Permission {
+                        app: false,
+                        color: true,
+                        owner: false,
+                        text: true,
+                        timestamp: false,
+                        action: false
+                    }
+                );
+        }</code></pre>
+<p>Now that we get to the interact function, which is called by default by the front end unless otherwise specified.</p>
+<p>Most importantly it calls the <code>core_actions.update_pixel</code> to change the color of a pixel that has been clicked.</p>
+<pre><code class="language-rust ignore">        /// Put color on a certain position
+        ///
+        /// # Arguments
+        ///
+        /// * `position` - Position of the pixel.
+        /// * `new_color` - Color to set the pixel to.
+        fn interact(self: @ContractState, default_params: DefaultParameters) {
+            'put_color'.print();
+
+            // Load important variables
+            let world = self.world_dispatcher.read();
+            let core_actions = get_core_actions(world);
+            let position = default_params.position;
+            let player = core_actions.get_player_address(default_params.for_player);
+            let system = core_actions.get_system_address(default_params.for_system);
+
+            // Load the Pixel
+            let mut pixel = get!(world, (position.x, position.y), (Pixel));
+
+            let COOLDOWN_SECS = 5;
+
+            // Check if 5 seconds have passed or if the sender is the owner
+            assert(
+            pixel.owner.is_zero() || (pixel.owner) == player || starknet::get_block_timestamp()
+            - pixel.timestamp &lt; COOLDOWN_SECS,
+            'Cooldown not over'
+            );
+
+            // We can now update color of the pixel
+            core_actions
+                .update_pixel(
+                    player,
+                    system,
+                    PixelUpdate {
+                        x: position.x,
+                        y: position.y,
+                        color: Option::Some(default_params.color),
+                        timestamp: Option::None,
+                        text: Option::None,
+                        app: Option::Some(system),
+                        owner: Option::Some(player),
+                        action: Option::None // Not using this feature for myapp
+                    }
+                );
+            'put_color DONE'.print();
+        }
+    }
+}</code></pre>
+<p>The above specifies the same functionality like our Paint App. Feel free to <a href="build-app/./2-deploy-app.html">deploy it locally</a>, make changes and try it out.</p>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<p>The guide above should get you familiar with how the Paint App is structured. The next step would be to:</p>
+<ul>
+<li><a href="build-app/./2-deploy-app.html">Deploy your app</a> to the front-end.</li>
+<li>Check out other <a href="build-app/../tutorial">tutorials</a> of other PixeLAW Apps.</li>
+<li>Check out the <a href="https://github.com/pixelaw/core">PixeLAW Core</a>.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deploy-your-app-locally"><a class="header" href="#deploy-your-app-locally">Deploy your app locally</a></h1>
+<h2 id="test-your-contract"><a class="header" href="#test-your-contract">Test your contract</a></h2>
+<p>Before building your smart contracts, you should test them.</p>
+<pre><code class="language-console">sozo test
+</code></pre>
+<p>There might be the following problem due to an issue with Dojo. Just ignore it.</p>
+<ul>
+<li><code>test myapp::tests::tests::test_myapp_actions ... fail (gas usage est.: 1044740) failures: myapp::tests::tests::test_myapp_actions - panicked with [6445855526543742234424738320591137923774065490617582916 ('CLASS_HASH_NOT_DECLARED'), 23583600924385842957889778338389964899652 ('ENTRYPOINT_FAILED'), 23583600924385842957889778338389964899652 ('ENTRYPOINT_FAILED'), ]</code></li>
+</ul>
+<h3 id="building-your-contracts"><a class="header" href="#building-your-contracts">Building your contracts</a></h3>
+<p>Run the following to compile the cairo contracts, generating the necessary artifacts for deployment.</p>
+<pre><code class="language-console">sozo build
+</code></pre>
+<h3 id="migratedeploy-your-app"><a class="header" href="#migratedeploy-your-app">Migrate/Deploy your App</a></h3>
+<p>This will deploy your contracts to the local PixeLAW world.</p>
+<pre><code class="language-console">sozo migrate --name pixelaw
+</code></pre>
+<h3 id="initialise-your-app"><a class="header" href="#initialise-your-app">Initialise your App</a></h3>
+<p>This will run <code>scripts/default_auth.sh</code> and provide necessary authorization and writer permission to your app.</p>
+<pre><code class="language-console">scarb run initialize
+</code></pre>
+<h3 id="uploading-your-manifest"><a class="header" href="#uploading-your-manifest">Uploading your manifest</a></h3>
+<p>This will run <code>scripts/upload_manifest.sh</code> and upload your manifest.json required by the front-end.</p>
+<pre><code class="language-console">scarb run upload_manifest
+</code></pre>
+<p>For zsh users,</p>
+<pre><code class="language-console">scarb run initialize_zsh
+</code></pre>
+<p>Awesome, you just successfully deployed your own PixeLAW App! If you fail, please read <a href="https://github.com/pixelaw/app_template">app_template README</a> to see another way to deploy.</p>
+<h1 id="deploying-your-app-to-pixelaw"><a class="header" href="#deploying-your-app-to-pixelaw">Deploying your app to PixeLAW</a></h1>
+<p>Deploying to https://demo.pixelaw.xyz/ is almost the same process as developing in your local development. The only difference is that you will require the RPC_URL of the Demo environment. For that, please reach out through <a href="https://t.co/jKDjNbFdZ5">Discord</a>.</p>
+<h3 id="build-your-contracts"><a class="header" href="#build-your-contracts">Build your contracts</a></h3>
+<pre><code class="language-console">sozo build
+</code></pre>
+<h3 id="deploy-your-contracts"><a class="header" href="#deploy-your-contracts">Deploy your contracts</a></h3>
+<p>This will deploy your app to the local PixeLAW using sozo migrate.</p>
+<pre><code class="language-console">sozo migrate --name pixelaw --rpc-url &lt;replace-this-with-provided-rpc-url&gt;
+</code></pre>
+<h3 id="initializing-your-contracts"><a class="header" href="#initializing-your-contracts">Initializing your contracts</a></h3>
+<p>This will grant writer permission to your app for any custom models made.</p>
+<pre><code class="language-console">scarb run initialize &lt;replace-this-with-provided-rpc-url&gt;
+</code></pre>
+<h3 id="uploading-your-manifest-1"><a class="header" href="#uploading-your-manifest-1">Uploading your manifest</a></h3>
+<pre><code class="language-console">scarb run upload_manifest http://demo.pixelaw.xyz/manifests/ 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quick-startfor-mud"><a class="header" href="#quick-startfor-mud">Quick Start(For MUD)</a></h1>
+<h2 id="deploy-the-pixel-core-locally-2"><a class="header" href="#deploy-the-pixel-core-locally-2">Deploy the Pixel Core locally</a></h2>
+<p>Everything in PixeLAW starts with the <a href="https://github.com/themetacat/pixelaw_core">core pixel layer</a> into which you will deploy your own app.</p>
+<p>Let's get started by deploying the core pixel layer, which includes both the contracts and the PixeLAW front-end.</p>
+<h2 id="prerequisites-2"><a class="header" href="#prerequisites-2">Prerequisites</a></h2>
+<ul>
+<li><a href="https://nodejs.org/en/download/package-manager">Node.js v18</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a></li>
+<li><a href="https://book.getfoundry.sh/getting-started/installation">Foundry</a></li>
+<li><a href="https://pnpm.io/">pnpm</a>
+<code>sudo npm install -g pnpm</code></li>
+</ul>
+<h2 id="clone-repo"><a class="header" href="#clone-repo">Clone repo</a></h2>
+<p>Please go to <a href="https://github.com/themetacat/pixelaw_core">pixelaw_core_mud</a>. And clone it.</p>
+<pre><code class="language-console">git clone https://github.com/themetacat/pixelaw_core pixelaw_core
+</code></pre>
+<h2 id="build-and-deploy-locally"><a class="header" href="#build-and-deploy-locally">Build and deploy locally</a></h2>
+<p>To make sure everything is working correctly, run the following command to do all things:</p>
+<pre><code class="language-console">cd pixelaw_core &amp;&amp; chmod u+x ./start.sh &amp;&amp; ./start.sh
+</code></pre>
+<p>After some time (around 10 minute) you should be able to see PixeLAW running on <a href="http://localhost:3000">http://localhost:3000</a>.</p>
+<p>You should be able to see PixeLAW in its true glory: <img src="getting-started/../images/PixelCore.png" alt="PixelCore" /></p>
+<p>If you run into any issues you can check out the <a href="https://github.com/pixelaw/app_template/tree/main">github repo</a>, and read <a href="https://github.com/themetacat/pixelaw_core/blob/main/start.sh">start.sh</a> to see the build and deploy details.</p>
+<h2 id="next-step-2"><a class="header" href="#next-step-2">Next Step</a></h2>
+<p>Awesome, you just successfully deployed the Pixel Core.</p>
+<p>The next step should be for you to build your own PixeLAW App. We will remain in the <code>app_template_mud</code> repo.</p>
+<p>Go and be a Pixel Builder and <a href="getting-started/../build-app/build-app-mud.html">deploy your own App to the core</a>!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="build-your-first-pixel-app-1"><a class="header" href="#build-your-first-pixel-app-1">Build your first Pixel App</a></h1>
+<blockquote>
+<p><strong><em>REQUIRED:</em></strong> To create your own application in PixeLAW, you must have <a href="build-app/../getting-started/quick-start-mud.html">set up the PixeLAW Core</a> environment locally.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deploy-your-app-locally-1"><a class="header" href="#deploy-your-app-locally-1">Deploy your app locally</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="get-started"><a class="header" href="#get-started">Get Started</a></h1>
+<p>Check out our <a href="https://github.com/pixelaw/">Github</a>, <a href="https://twitter.com/0xPixeLAW">Twitter</a>, <a href="https://t.co/jKDjNbFdZ5">Discord</a> and contribution guide(coming soon).</p>
+<p>Please contact us on <a href="https://t.co/jKDjNbFdZ5">Discord</a> freely.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="architecture"><a class="header" href="#architecture">Architecture</a></h1>
+<p>Here, we describe PixeLAW's architecture.</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>We built core layer. Builders can create their own application by interacting with core layer.
+<img src="architecture/../images/overview.jpg" alt="overview" /></p>
+<h2 id="core-layer"><a class="header" href="#core-layer">Core Layer</a></h2>
+<p>To understand core layer, we delve into components and systems for that.</p>
+<h3 id="core-components"><a class="header" href="#core-components">Core Components</a></h3>
+<p>Here are the components.</p>
+<h4 id="for-system-properties"><a class="header" href="#for-system-properties">For System Properties</a></h4>
+<ul>
+<li><code>x</code>: u64</li>
+<li><code>y</code>: u64</li>
+<li><code>created_at</code>: u64</li>
+<li><code>updated_at</code>: u64</li>
+</ul>
+<h4 id="for-user-changeable-properties"><a class="header" href="#for-user-changeable-properties">For User-changeable Properties</a></h4>
+<ul>
+<li><code>app</code>: ContractAddress</li>
+<li><code>color</code>: u32</li>
+<li><code>owener</code>: ContractAddress</li>
+<li><code>text</code>: felt252</li>
+<li><code>timestamp</code>: u64</li>
+<li><code>action</code>: felt252</li>
+</ul>
+<p><img src="architecture/../images/CoreComponents.jpg" alt="Components" /></p>
+<h3 id="core-systems"><a class="header" href="#core-systems">Core Systems</a></h3>
+<p>These systems interact with core components.</p>
+<ul>
+<li><code>init</code>: Initialize the PixeLAW action model</li>
+<li><code>update_permissions</code>: Grant permissions to a system by the caller</li>
+<li><code>update_app</code>: Updates the name of an app in the registry</li>
+<li><code>has_write_access</code>: Check the access for writing</li>
+<li><code>shedule_queue</code>: Shedule the process for queue</li>
+<li><code>process_queue</code>: Execute the process in queue</li>
+<li><code>update_pixel</code>: Update pixel information</li>
+<li><code>get_player_address</code>: Get the address</li>
+<li><code>get_system_address</code>: Get the address</li>
+<li><code>new_app</code>: Register an app</li>
+</ul>
+<h2 id="applications-on-pixelaw"><a class="header" href="#applications-on-pixelaw">Applications on PixeLAW</a></h2>
+<p>There are already some applications top of core layer for example.</p>
+<h3 id="paint-pixel"><a class="header" href="#paint-pixel">Paint pixel</a></h3>
+<p>By utilizing core systems, we can create our own pixel art game.
+<img src="architecture/../images/PaintSystems.jpg" alt="Paint" /></p>
+<h3 id="sanke-game"><a class="header" href="#sanke-game">Sanke Game</a></h3>
+<p>For snake game, the queue system is important.
+<img src="architecture/../images/SnakeSystems.jpg" alt="Snake" /></p>
+<h2 id="queue-system"><a class="header" href="#queue-system">Queue System</a></h2>
+<p>We use queue system to execute stacked processes.
+<img src="architecture/../images/queue.jpg" alt="Queue" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h1>
+<p>Here we will have a growing collection of PixeLAW Apps that you can check out as use as use cases for your own.</p>
+<p>Remember to firstly go through the <a href="app-tutorials/../getting-started/quick-start.html">Quickstart</a> to deploy the core and get familiar with <a href="app-tutorials/../build-app/1-build-app.html">how to build your own PixeLAW App</a>.</p>
+<p>Tutorial:</p>
+<ul>
+<li><a href="app-tutorials/./minesweeper/README.html">Minesweeper</a>: You can learn how to build your game by building minesweeper.</li>
+<li>Check out other App Examples in our <a href="https://github.com/pixelaw/examples">repo</a>.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="functions"><a class="header" href="#functions">Functions</a></h3>
+<p>We need following functions:</p>
+<ul>
+<li>init: initialize application settings.</li>
+<li>interact: interact with PixeLAW field. When we start game, we call this function to set up field.</li>
+<li>reveal: reveal the pixel if bomb or not.</li>
+<li>explode: if a player reveals a bomb, this function is called.</li>
+<li>ownerless_space:</li>
+</ul>
+<p>We can write interface like this:</p>
+<pre><code class="language-rust ignore">#[starknet::interface]
+trait IMinesweeperActions&lt;TContractState&gt; {
+    fn init(self: @TContractState);
+    fn interact(self: @TContractState, default_params: DefaultParameters, size: u64, mines_amount: u64);
+    fn reveal(self: @TContractState, default_params: DefaultParameters);
+    fn explode(self: @TContractState, default_params: DefaultParameters);
+    fn ownerless_space(self: @TContractState, default_params: DefaultParameters, size: u64) -&gt; bool;
+}</code></pre>
+<h3 id="set-constants"><a class="header" href="#set-constants">Set constants</a></h3>
+<p>We set some constants. We added <code>GAME_MAX_DURATION</code> to avoid parmanent sessions.</p>
+<pre><code class="language-rust ignore">/// APP_KEY must be unique across the entire platform
+const APP_KEY: felt252 = 'minesweeper';
+
+/// Core only supports unicode icons for now
+const APP_ICON: felt252 = 'U+1F4A3'; // bomb
+
+/// prefixing with BASE means using the server's default manifest.json handler
+const APP_MANIFEST: felt252 = 'BASE/manifests/minesweeper';
+
+/// The maximum duration of a game in milliseconds
+const GAME_MAX_DURATION: u64 = 20000;</code></pre>
+<p>We used <a href="http://xahlee.info/comp/unicode_index.html?q=bom">this</a> to search the unicode icon.</p>
+<h3 id="create-enum-and-struct"><a class="header" href="#create-enum-and-struct">Create enum and struct</a></h3>
+<p>We use State and Game. State represents statement of pixel in minesweeper, and Game struct handle the components for this game.</p>
+<pre><code class="language-rust ignore">#[derive(Serde, Copy, Drop, PartialEq, Introspect)]
+enum State {
+    None: (),
+    Open: (),
+    Finished: ()
+}
+
+#[derive(Model, Copy, Drop, Serde, SerdeLen)]
+struct Game {
+    #[key]
+    x: u64,
+    #[key]
+    y: u64,
+    id: u32,
+    creator: ContractAddress,
+    state: State,
+    size: u64,
+    mines_amount: u64,
+    started_timestamp: u64
+}  </code></pre>
+<h3 id="import-them"><a class="header" href="#import-them">Import them</a></h3>
+<p>Don't forget to import them.</p>
+<pre><code class="language-rust ignore">use super::{Game, State};
+use super::{APP_KEY, APP_ICON, APP_MANIFEST, GAME_MAX_DURATION};</code></pre>
+<h3 id="set-up-functions"><a class="header" href="#set-up-functions">Set up functions</a></h3>
+<p>In <code>ActionsImpl</code>, please declare functions.</p>
+<pre><code class="language-rust ignore">#[dojo::contract]
+mod minesweeper_actions {
+    /// ...
+    use poseidon::poseidon_hash_span;
+    #[derive(Drop, starknet::Event)]
+    struct GameOpened {
+        game_id: u32,
+        creator: ContractAddress
+    }
+
+    #[event]
+    #[derive(Drop, starknet::Event)]
+    enum Event {
+        GameOpened: GameOpened
+    }
+    /// ...
+    #[external(v0)]
+    impl ActionsImpl of IMinesweeperActions&lt;ContractState&gt; {
+        fn init(self: @TContractState) {}
+        fn interact(self: @TContractState, default_params: DefaultParameters, size: u64, mines_amount: u64) {}
+        fn reveal(self: @TContractState, default_params: DefaultParameters) {}
+        fn explode(self: @TContractState, default_params: DefaultParameters) {}
+        fn ownerless_space(self: @TContractState, default_params: DefaultParameters, size: u64) -&gt; bool {}
+    }
+}</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="write-fn-init"><a class="header" href="#write-fn-init">Write fn init()</a></h2>
+<p>Same as default.</p>
+<pre><code class="language-rust ignore">fn init(self: @ContractState) {
+    let world = self.world_dispatcher.read();
+    let core_actions = pixelaw::core::utils::get_core_actions(world);
+
+    core_actions.update_app(APP_KEY, APP_ICON, APP_MANIFEST);
+
+    // TODO: replace this with proper granting of permission
+
+    core_actions.update_permission('snake',
+        Permission {
+            alert: false,
+            app: false,
+            color: true,
+            owner: false,
+            text: true,
+            timestamp: false,
+            action: false
+        });
+    core_actions.update_permission('paint',
+        Permission {
+            alert: false,
+            app: false,
+            color: true,
+            owner: false,
+            text: true,
+            timestamp: false,
+            action: false
+        });
+}</code></pre>
+<h3 id="write-a-draft-of-fn-interact"><a class="header" href="#write-a-draft-of-fn-interact">Write a draft of fn interact()</a></h3>
+<p>Initially, load some information</p>
+<pre><code class="language-rust ignore">let caller_address = get_caller_address();
+let mut game = get!(world, (position.x, position.y), (Game));
+let timestamp = starknet::get_block_timestamp();</code></pre>
+<p>We call this <code>interact()</code> function when we click pixels. So, we use <code>pixel.alert</code> to call functions.</p>
+<pre><code class="language-rust ignore">if pixel.alert = 'reveal' {
+    // call reveal function
+    self.reveal(default_params);
+} else if pixel.alert = 'explode' {
+    // call explode function
+    self.explode(default_params);
+} else if self.ownerless_space(default_params, size: size) == true {
+    // declare a new game
+} else {
+    // we can't do anything, so we just return
+    'find a free area'.print();
+}</code></pre>
+<h3 id="implement-function-when-we-start-game"><a class="header" href="#implement-function-when-we-start-game">Implement function when we start game</a></h3>
+<p>If <code>self.ownerless_space()</code> returns true, we can start new game. Let's start new game.</p>
+<pre><code class="language-rust ignore">let mut id = world.uuid();
+
+// set game information
+game = 
+    Game {
+        x: position.x,
+        y: position.y,
+        id,
+        creator: player,
+        state: State::Open,
+        size: size,
+        mines_amount: mines_amount,
+        started_timestamp: timestamp
+    };
+
+
+emit!(world, GameOpened {game_id: game.id, creator: player});
+
+set!(world, (game));
+
+let mut i: u64 = 0;
+let mut j: u64 = 0;
+
+// update pixels to set color and alert. Then, if player click the pixel, they call reveal function.
+loop { 
+    if i &gt;= size {
+        break;
+    }
+    j = 0;
+    loop { 
+        if j &gt;= size {
+            break;
+        }
+        core_actions
+            .update_pixel(
+            player,
+            system,
+            PixelUpdate {
+                x: position.x + j,
+                y: position.y + i,
+                color: Option::Some(default_params.color), //should I pass in a color to define the minesweepers field color?
+                alert: Option::Some('reveal'),
+                timestamp: Option::None,
+                text: Option::None,
+                app: Option::Some(system),
+                owner: Option::Some(player),
+                action: Option::None,
+                }
+            );
+            j += 1;
+    };
+    i += 1;
+};</code></pre>
+<p>Then, set mines.</p>
+<pre><code class="language-rust ignore">let mut num_mines = 0;
+loop {
+    if num_mines &gt;= mines_amount {
+        break;
+    }
+    let timestamp_felt252 = timestamp.into();
+    let x_felt252 = position.x.into();
+    let y_felt252 = position.y.into();
+    let m_felt252 = num_mines.into();
+
+    //random = (timestamp + i) + position.x.into() + position.y.into();
+
+    let hash: u256 = poseidon_hash_span(array![timestamp_felt252, x_felt252, y_felt252, m_felt252].span()).into();
+    random_number = hash % (size * size).into();
+
+    core_actions
+        .update_pixel(
+            player,
+            system,
+            PixelUpdate {
+                //x: (position.x + random_x),
+                x: position.x + (random_number / size.into()).try_into().unwrap(),
+                //y: (position.y + random_y),
+                y: position.y + (random_number % size.into()).try_into().unwrap(),
+                color: Option::Some(default_params.color),
+                alert: Option::Some('explode'),
+                timestamp: Option::None,
+                text: Option::None,
+                app: Option::Some(system),
+                owner: Option::Some(player),
+                action: Option::None,
+            }
+        );
+    num_mines += 1;
+};</code></pre>
+<h3 id="whole-code-in-minesweeper_actions-is-like-this"><a class="header" href="#whole-code-in-minesweeper_actions-is-like-this">Whole code in <code>minesweeper_actions</code> is like this</a></h3>
+<pre><code class="language-rust ignore">#[dojo::contract]
+/// contracts must be named as such (APP_KEY + underscore + "actions")
+mod minesweeper_actions {
+    use starknet::{
+        get_tx_info, get_caller_address, get_contract_address, get_execution_info, ContractAddress
+    };
+
+    use super::IMinesweeperActions;
+    use pixelaw::core::models::pixel::{Pixel, PixelUpdate};
+
+    use pixelaw::core::models::permissions::{Permission};
+    use pixelaw::core::actions::{
+        IActionsDispatcher as ICoreActionsDispatcher,
+        IActionsDispatcherTrait as ICoreActionsDispatcherTrait
+    };
+    use super::{Game, State};
+    use super::{APP_KEY, APP_ICON, APP_MANIFEST, GAME_MAX_DURATION};
+    use pixelaw::core::utils::{get_core_actions, Direction, Position, DefaultParameters};
+
+    use debug::PrintTrait;
+
+    use poseidon::poseidon_hash_span;
+
+    #[derive(Drop, starknet::Event)]
+    struct GameOpened {
+        game_id: u32,
+        creator: ContractAddress
+    }
+
+    #[event]
+    #[derive(Drop, starknet::Event)]
+    enum Event {
+        GameOpened: GameOpened
+    }
+
+
+    fn subu8(nr: u8, sub: u8) -&gt; u8 {
+        if nr &gt;= sub {
+            return nr - sub;
+        } else {
+            return 0;
+        }
+    }
+
+
+    // ARGB
+    // 0xFF FF FF FF
+    // empty: 0x 00 00 00 00
+    // normal color: 0x FF FF FF FF
+
+    fn encode_color(r: u8, g: u8, b: u8) -&gt; u32 {
+        (r.into() * 0x10000) + (g.into() * 0x100) + b.into()
+    }
+
+    fn decode_color(color: u32) -&gt; (u8, u8, u8) {
+        let r = (color / 0x10000);
+        let g = (color / 0x100) &amp; 0xff;
+        let b = color &amp; 0xff;
+
+        (r.try_into().unwrap(), g.try_into().unwrap(), b.try_into().unwrap())
+    }
+
+    // impl: implement functions specified in trait
+    #[external(v0)]
+    impl ActionsImpl of IMinesweeperActions&lt;ContractState&gt; {
+        /// Initialize the MyApp App (TODO I think, do we need this??)
+        fn init(self: @ContractState) {
+            let world = self.world_dispatcher.read();
+            let core_actions = pixelaw::core::utils::get_core_actions(world);
+
+            core_actions.update_app(APP_KEY, APP_ICON, APP_MANIFEST);
+
+            // TODO: replace this with proper granting of permission
+            
+            core_actions.update_permission('snake',
+                Permission {
+                    alert: false,
+                    app: false,
+                    color: true,
+                    owner: false,
+                    text: true,
+                    timestamp: false,
+                    action: false
+                });
+            core_actions.update_permission('paint',
+                Permission {
+                    alert: false,
+                    app: false,
+                    color: true,
+                    owner: false,
+                    text: true,
+                    timestamp: false,
+                    action: false
+                });     
+        }
+
+
+        /// Put color on a certain position
+        ///
+        /// # Arguments
+        ///
+        /// default_params: Default parameters for the action
+        /// size: Size of the board
+        /// mines_amount: Amount of mines to place
+        fn interact(self: @ContractState, default_params: DefaultParameters, size: u64, mines_amount: u64) {
+            'put_color'.print();
+
+            // Load important variables
+            let world = self.world_dispatcher.read();
+            let core_actions = get_core_actions(world);
+            let position = default_params.position;
+            let player = core_actions.get_player_address(default_params.for_player);
+            let system = core_actions.get_system_address(default_params.for_system);
+
+            // Load the Pixel
+            let mut pixel = get!(world, (position.x, position.y), (Pixel));
+
+            let caller_address = get_caller_address();
+            let mut game = get!(world, (position.x, position.y), (Game));
+            let timestamp = starknet::get_block_timestamp();
+
+            if (pixel.alert == 'reveal') {
+                // call reveal function
+                self.reveal(default_params);
+            } else if (pixel.alert == 'explode') {
+                // call explode function
+                self.explode(default_params);
+            } else if (self.ownerless_space(default_params, size: size) == true ){
+                // start a new game
+                let mut id = world.uuid();
+                game = 
+                    Game {
+                        x: position.x,
+                        y: position.y,
+                        id,
+                        creator: player,
+                        state: State::Open,
+                        size: size,
+                        mines_amount: mines_amount,
+                        started_timestamp: timestamp
+                    };
+
+                emit!(world, GameOpened {game_id: game.id, creator: player});
+
+                set!(world, (game));
+
+                let mut i: u64 = 0;
+				let mut j: u64 = 0;
+
+                loop { 
+					if i &gt;= size {
+						break;
+					}
+					j = 0;
+					loop { 
+						if j &gt;= size {
+							break;
+						}
+						core_actions
+							.update_pixel(
+							player,
+							system,
+							PixelUpdate {
+								x: position.x + j,
+								y: position.y + i,
+								color: Option::Some(default_params.color), //should I pass in a color to define the minesweepers field color?
+								alert: Option::Some('reveal'),
+								timestamp: Option::None,
+								text: Option::None,
+								app: Option::Some(system),
+								owner: Option::Some(player),
+								action: Option::None,
+								}
+							);
+							j += 1;
+					};
+					i += 1;
+				};
+
+				let mut random_number: u256 = 0;
+
+				let mut num_mines = 0;
+				loop {
+					if num_mines &gt;= mines_amount {
+						break;
+					}
+					let timestamp_felt252 = timestamp.into();
+					let x_felt252 = position.x.into();
+					let y_felt252 = position.y.into();
+					let m_felt252 = num_mines.into();
+
+					let hash: u256 = poseidon_hash_span(array![timestamp_felt252, x_felt252, y_felt252, m_felt252].span()).into();
+					random_number = hash % (size * size).into();
+
+                    core_actions
+                        .update_pixel(
+                            player,
+                            system,
+                            PixelUpdate {
+                                //x: (position.x + random_x),
+                                x: position.x + (random_number / size.into()).try_into().unwrap(),
+                                //y: (position.y + random_y),
+                                y: position.y + (random_number % size.into()).try_into().unwrap(),
+                                color: Option::Some(default_params.color),
+                                alert: Option::Some('explode'),
+                                timestamp: Option::None,
+                                text: Option::None,
+                                app: Option::Some(system),
+                                owner: Option::Some(player),
+                                action: Option::None,
+                            }
+                        );
+                    num_mines += 1;
+                };
+
+            } else {
+                // we can't do anything, so we just return
+                'find a free area'.print();
+            }
+
+            assert(
+                pixel.owner.is_zero() || (pixel.owner) == player || starknet::get_block_timestamp()
+                    - pixel.timestamp &lt; COOLDOWN_SECS,
+                'Cooldown not over'
+            );
+
+            // We can now update color of the pixel
+            core_actions
+                .update_pixel(
+                    player,
+                    system,
+                    PixelUpdate {
+                        x: position.x,
+                        y: position.y,
+                        color: Option::Some(default_params.color),
+                        alert: Option::None,
+                        timestamp: Option::None,
+                        text: Option::None,
+                        app: Option::Some(system),
+                        owner: Option::Some(player),
+                        action: Option::None // Not using this feature for myapp
+                    }
+                );
+
+            'put_color DONE'.print();
+        }
+
+        /// Reveal a pixel on a certain position
+        ///
+        /// # Arguments
+        /// default_params: Default parameters for the action
+        fn reveal(self: @ContractState, default_params: DefaultParameters) {
+
+        }
+
+        /// Explode a pixel on a certain position
+        ///
+        /// # Arguments
+        /// default_params: Default parameters for the action
+        fn explode(self: @ContractState, default_params: DefaultParameters) {
+
+        }
+
+        /// Check if a certain position is ownerless
+        ///
+        /// # Arguments
+        /// default_params: Default parameters for the action
+        /// size: Size of the board
+        fn ownerless_space(self: @ContractState, default_params: DefaultParameters, size: u64) -&gt; bool {
+            return true; // for debug
+        }
+    }
+}</code></pre>
+<h3 id="test-so-far"><a class="header" href="#test-so-far">Test so far</a></h3>
+<p>Please do not foget adding grant_writer:</p>
+<pre><code class="language-rust ignore">world.grant_writer('Game',minesweeper_actions_address);</code></pre>
+<p>Check your codes by this command:</p>
+<pre><code class="language-console">sozo test
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="implement-reveal"><a class="header" href="#implement-reveal">Implement <code>reveal()</code></a></h2>
+<pre><code class="language-rust ignore">/// Reveal a pixel on a certain position
+///
+/// # Arguments
+/// default_params: Default parameters for the action
+fn reveal(self: @ContractState, default_params: DefaultParameters) {
+    let world = self.world_dispatcher.read();
+    let core_actions = get_core_actions(world);
+    let position = default_params.position;
+    let player = core_actions.get_player_address(default_params.for_player);
+    let system = core_actions.get_system_address(default_params.for_system);
+    let mut pixel = get!(world, (position.x, position.y), (Pixel));
+
+    core_actions
+        .update_pixel(
+            player,
+            system,
+            PixelUpdate {
+                x: position.x,
+                y: position.y,
+                color: Option::Some(default_params.color),
+                alert: Option::None,
+                timestamp: Option::None,
+                text: Option::Some('U+1F30E'),
+                app: Option::None,
+                owner: Option::None,
+                action: Option::None,
+            }
+        );
+}</code></pre>
+<h2 id="implement-explode"><a class="header" href="#implement-explode">Implement <code>explode()</code></a></h2>
+<pre><code class="language-rust ignore">/// Explode a pixel on a certain position
+///
+/// # Arguments
+/// default_params: Default parameters for the action
+fn explode(self: @ContractState, default_params: DefaultParameters) {
+    let world = self.world_dispatcher.read();
+    let core_actions = get_core_actions(world);
+    let position = default_params.position;
+    let player = core_actions.get_player_address(default_params.for_player);
+    let system = core_actions.get_system_address(default_params.for_system);
+    let mut pixel = get!(world, (position.x, position.y), (Pixel));
+
+    core_actions
+        .update_pixel(
+            player,
+            system,
+            PixelUpdate {
+                x: position.x,
+                y: position.y,
+                color: Option::Some(default_params.color),
+                alert: Option::None,
+                timestamp: Option::None,
+                text: Option::Some('U+1F4A3'),
+                app: Option::None,
+                owner: Option::None,
+                action: Option::None,
+            }
+        );
+}</code></pre>
+<h2 id="implement-owner_less"><a class="header" href="#implement-owner_less">Implement <code>owner_less()</code></a></h2>
+<pre><code class="language-rust ignore">fn ownerless_space(self: @ContractState, default_params: DefaultParameters, size: u64) -&gt; bool {
+    let world = self.world_dispatcher.read();
+    let core_actions = get_core_actions(world);
+    let position = default_params.position;
+    let mut pixel = get!(world, (position.x, position.y), (Pixel));
+
+    let mut i: u64 = 0;
+    let mut j: u64 = 0;
+    let mut check_test: bool = true;
+
+    let check = loop {
+        if !(pixel.owner.is_zero() &amp;&amp; i &lt;= size)
+        {
+            break false;
+        }
+        pixel = get!(world, (position.x, (position.y + i)), (Pixel));
+        j = 0;
+        loop {
+            if !(pixel.owner.is_zero() &amp;&amp; j &lt;= size)
+            {
+                break false;
+            }
+            pixel = get!(world, ((position.x + j), position.y), (Pixel));
+            j += 1;
+        };
+        i += 1;
+        break true;
+    };
+    check
+}</code></pre>
+<h2 id="test"><a class="header" href="#test">Test</a></h2>
+<p>Test code is gonna be like this:</p>
+<pre><code class="language-rust ignore">fn test_create_minefield() {
+    // Deploy everything
+    let (world, core_actions, minesweeper_actions) = deploy_world();
+
+    core_actions.init();
+    minesweeper_actions.init();
+
+    // Impersonate player
+    let player = starknet::contract_address_const::&lt;0x1337&gt;();
+    starknet::testing::set_account_contract_address(player);
+
+    //computer variables
+    let size: u64 = 5;
+    let mines_amount: u64 = 10;
+
+    // Player creates minefield
+    minesweeper_actions
+        .interact(
+            DefaultParameters {
+                for_player: Zeroable::zero(),
+                for_system: Zeroable::zero(),
+                position: Position { x: 1, y: 1 },
+                color: 0
+            },
+            size,
+            mines_amount
+        );
+}</code></pre>
+<p>Please check your implementation so far</p>
+<pre><code class="language-console">sozo test
+</code></pre>
+<h2 id="deploy"><a class="header" href="#deploy">Deploy</a></h2>
+<p>After this, please deploy by following <a href="app-tutorials/minesweeper/../setup-deploy/README.html">this</a></p>
 
                     </main>
 
@@ -191,22 +1216,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
