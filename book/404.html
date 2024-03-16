@@ -89,9 +89,11 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting Started</li><li class="chapter-item expanded "><a href="getting-started/quick-start.html"><strong aria-hidden="true">2.</strong> Quick Start</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/quick-start.html"><strong aria-hidden="true">2.1.</strong> For Dojo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="build-app/1-build-app.html"><strong aria-hidden="true">2.1.1.</strong> Build a PixeLAW App</a></li><li class="chapter-item expanded "><a href="build-app/2-deploy-app.html"><strong aria-hidden="true">2.1.2.</strong> Deploy a PixeLAW App</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started/quick-start-mud.html"><strong aria-hidden="true">2.2.</strong> For MUD</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="build-app/1-build-app-mud.html"><strong aria-hidden="true">2.2.1.</strong> Build a PixeLAW App</a></li><li class="chapter-item expanded "><a href="build-app/2-deploy-app-mud.html"><strong aria-hidden="true">2.2.2.</strong> Deploy a PixeLAW App</a></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Community&Contribution</li><li class="chapter-item expanded "><a href="cc/get-started.html"><strong aria-hidden="true">3.</strong> Get Started</a></li><li class="chapter-item expanded affix "><li class="part-title">Architecture</li><li class="chapter-item expanded "><a href="architecture/overview.html"><strong aria-hidden="true">4.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">App Tutorials</li><li class="chapter-item expanded "><a href="app-tutorials/tutorials.html"><strong aria-hidden="true">5.</strong> Minesweeper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app-tutorials/minesweeper/0-minesweeper-intro.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="app-tutorials/minesweeper/1-init-and-interact.html"><strong aria-hidden="true">5.2.</strong> Init and Interact</a></li><li class="chapter-item expanded "><a href="app-tutorials/minesweeper/2-implement-rest.html"><strong aria-hidden="true">5.3.</strong> Implement the rest</a></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -146,6 +148,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/pixelaw/book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -192,22 +197,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
