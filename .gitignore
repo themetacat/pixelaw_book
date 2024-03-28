@@ -3,4 +3,5 @@ out
 cache
 .idea
 .vscode
+.DS_Store
 *~
