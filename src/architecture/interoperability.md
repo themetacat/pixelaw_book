@@ -1,6 +1,6 @@
 # Interoperability
 The Core contract facilitates app-to-app communication via the Interoperability Trait:
-````
+```rust,ignore
 use dojo::world::{IWorldDispatcher, IWorldDispatcherTrait};
 use pixelaw::core::models::pixel::PixelUpdate;
 use pixelaw::core::models::registry::App;
@@ -21,9 +21,9 @@ trait IInteroperability<TContractState> {
     player_caller: ContractAddress
   );
 }
-````
+```
 These functions are then called during update by the Core contract like so:
-````
+```rust,ignore
         fn update_pixel(
             self: @ContractState,
             for_player: ContractAddress,
@@ -59,23 +59,23 @@ These functions are then called during update by the Core contract like so:
 
             'update_pixel DONE'.print();
         }
-````
+```
 
 ## Implementing Interoperability
 To use these functions an app just has to follow these steps:
 
 ### Step 1: Import the trait
 Inside the dojo contract, import the interoperability trait
-````
+```rust,ignore
 #[dojo::contract]
 mod paint_actions {
     // put import here
     use pixelaw::core::traits::IInteroperability;
-````
+```
 
 ### Step 2: Implement the trait
 Like any trait, just implement it like so:
-````
+```rust,ignore
 #[dojo::contract]
 mod paint_actions {
     // put import here
@@ -101,7 +101,7 @@ mod paint_actions {
         // put post_update_code here
       }
     }
-````
+```
 
 ## Examples
 
@@ -110,14 +110,14 @@ When Snake is done passing through a pixel, it reverts the pixel back to its ori
 interoperability, when a Snake reverts back a Paint Pixel, it gets the Paint pixel to use fade on it.
 
 #### Snake first imports the trait
-````
+```rust,ignore
 #[dojo::contract]
 mod snake_actions {
     use pixelaw::core::traits::IInteroperability;
-````
+```
 
 #### Snake implements the trait
-````
+```rust,ignore
 #[external(v0)]
     impl ActionsInteroperability of IInteroperability<ContractState> {
       fn on_pre_update(
@@ -138,10 +138,10 @@ mod snake_actions {
         // put in code here
       }
     }
-````
+```
 
 Snake first determines that the on_post_update is being called by the core contract:
-````
+```rust,ignore
     fn on_post_update(
         self: @ContractState,
         pixel_update: PixelUpdate,
@@ -152,10 +152,10 @@ Snake first determines that the on_post_update is being called by the core contr
         let core_actions_address = get_core_actions_address(self.world_dispatcher.read());
         assert(core_actions_address == get_caller_address(), 'caller is not core_actions');
       }
-````
+```
 
 Next it makes sure that this is indeed a reversal of pixel state, and it's been called by the Snake Contract:
-````
+```rust,ignore
     fn on_post_update(
         self: @ContractState,
         pixel_update: PixelUpdate,
@@ -171,10 +171,10 @@ Next it makes sure that this is indeed a reversal of pixel state, and it's been 
         
         }
       }
-````
+```
 
 Then, Snake needs to check if it's reverting back to a Paint pixel
-````
+```rust,ignore
     fn on_post_update(
         self: @ContractState,
         pixel_update: PixelUpdate,
@@ -197,10 +197,10 @@ Then, Snake needs to check if it's reverting back to a Paint pixel
           }
         }
       }
-````
+```
 
 Lastly, it calls the paint contract to let it fade
-````
+```rust,ignore
     fn on_post_update(
         self: @ContractState,
         pixel_update: PixelUpdate,
@@ -234,4 +234,4 @@ Lastly, it calls the paint contract to let it fade
           }
         }
       }
-````
+```
