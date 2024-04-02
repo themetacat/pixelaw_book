@@ -15,6 +15,7 @@
 
 # Architecture
 - [Overview](./architecture/overview.md)
+- [Interoperability](./architecture/interoperability.md)
 
  # App Tutorials
 - [Minesweeper](./app-tutorials/tutorials.md)
