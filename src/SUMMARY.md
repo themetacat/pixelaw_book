@@ -1,6 +1,9 @@
 # Summary
 - [Foreword](./README.md)
 
+# How to Play
+- [Tutorials](./how-to-play/tutorials.md)
+
 # Getting Started
 - [Quick Start](./getting-started/quick-start.md)
   - [For Dojo](./getting-started/quick-start.md)
