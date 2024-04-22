@@ -9,7 +9,7 @@ Lets check out the folder structure first of the [App Template](https://github.c
 - **`contracts/` contains all your solidity contracts and scripts for deployment**
   - `src/` contains your app's codegen and logic.
     - `codegen/` contains your app's store codegen and contracts interface.
-    - `core_codegen/` contains pixeLAW Core's store codegen and contracts interface.
+    - `core_codegen/` contains PixeLAW Core's store codegen and contracts interface.
     - `systems/` contains your app's logic contract.
   - `test/` contains your app's test contract.
   - `script/` contains your app's extension contract.
@@ -17,7 +17,7 @@ Lets check out the folder structure first of the [App Template](https://github.c
     - `deploy.sh` deploy your app contract and init your app.
     - `upload_json.sh` upload your abi to github.
   - `mud.config.ts` your app's table and namespace config.
-  - `.env` contains the values required to deploy the MUD and pixeLAW core
+  - `.env` contains the values required to deploy the MUD and PixeLAW core
 
 The default App Template includes the contract code of Paint App which allows users to paint any pixel with any color.
 
