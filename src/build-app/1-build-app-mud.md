@@ -9,11 +9,11 @@ Lets check out the folder structure first of the [App Template](https://github.c
 - **`contracts/` contains all your solidity contracts and scripts for deployment**
   - `src/` contains your app's codegen and logic.
     - `codegen/` contains your app's store codegen and contracts interface.
-    - `core_codegen` contains your pixeLAW Core's store codegen and contracts interface.
-    - `systems` contains app's logic contract.
+    - `core_codegen/` contains pixeLAW Core's store codegen and contracts interface.
+    - `systems/` contains your app's logic contract.
   - `test/` contains your app's test contract.
   - `script/` contains your app's extension contract.
-  - `scripts` contains scripts for deployment.
+  - `scripts/` contains scripts for deployment.
     - `deploy.sh` deploy your app contract and init your app.
     - `upload_json.sh` upload your abi to github.
   - `mud.config.ts` your app's table and namespace config.
@@ -27,7 +27,7 @@ Let's dive into the code of the [App Template](https://github.com/themetacat/pix
 
 ### Imports
 
-At first we require certain imports from the core to enable our paint app. Depending on your use case you might require different imports. Refer to the [Pixel Core](https://github.com/pixelaw/core),
+At first we require certain imports from the core to enable our paint app. Depending on your use case you might require different imports. Refer to the [Pixel Core](https://github.com/themetacat/pixelaw_core),
 
 ```solidity
 import { System } from "@latticexyz/world/src/System.sol";
@@ -42,7 +42,7 @@ import { PermissionsData, DefaultParameters, Position, PixelUpdateData, Pixel, P
 
 2. The **NAMESPACE** is the namespace you set in mud.config.ts, which is the namespace after the current app contract is deployed.
 
-3. The **SYSTEM_NAME** is the name set for the current contract in systems of mud.config.ts
+3. The **SYSTEM_NAME** is the system name set for the current contract in systems of mud.config.ts
 
 4. The **APP_NAME** is the unique username of your app, and has to be the same across the entire platform.
 
@@ -83,6 +83,10 @@ function init() public {
 ```
 Now that we get to the interact function, which is called by default by the front end unless otherwise specified. 
 Most importantly it calls the `ICoreSystem(_world()).update_pixel` to change the color of a pixel that has been clicked.
+When calling update_pixel, if you do not want to set a value for one of the parameters or change the original value of the pixel, please do this:
+If the parameter type is address, please pass in address(1),
+If the parameter type is string, please pass in "_Null"
+This will automatically skip the permission check and assignment of the parameter.
 
 ```solidity
   //Put color on a certain position
@@ -115,12 +119,13 @@ Most importantly it calls the `ICoreSystem(_world()).update_pixel` to change the
         y: position.y,
         color: default_parameters.color,
         timestamp: 0,
-        text: "",
+        text: "_Null",
         app: app,
         owner: player,
-        action: ""
+        action: "_Null"
       }));
   }
+  
 ```
 
 The above specifies the same functionality like our Paint App. Feel free to [deploy it locally](./2-deploy-app-mud.md), make changes and try it out.
@@ -129,5 +134,5 @@ The above specifies the same functionality like our Paint App. Feel free to [dep
 
 The guide above should get you familiar with how the Paint App is structured. The next step would be to:
 - [Deploy your app](./2-deploy-app-mud.md) to the front-end.
-- Check out other [tutorials](../tutorial) of other PixeLAW Apps.
+- Check out other [tutorials](../how-to-play/tutorials.md) of other PixeLAW Apps.
 - Check out the [PixeLAW Core](https://github.com/themetacat/pixelaw_core/tree/main).

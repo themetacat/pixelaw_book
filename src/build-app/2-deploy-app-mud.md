@@ -1,8 +1,8 @@
 # Deploy your app locally
 
 ## Building your contracts
-First make sure you are currently in the `pixelaw_app_template_mud/contracts/`
 Before deploy your smart contracts, you should run the following to compile the solidity contracts.
+Make sure you are currently in the `pixelaw_app_template_mud/contracts/`
 ````sh
 pnpm mud build
 ````
@@ -41,12 +41,12 @@ pnpm mud build
 ```
 
 #### Deploy/Update your App:
-###### If the app contract is deployed for the first time: 
+##### If the app contract is deployed for the first time: 
 ```sh
 pnpm run deploy RPC_URL=<replace-this-with-provided-rpc-url> CHAIN_ID=<replace-this-with-chain-id>
 ```
 
-###### If you want to update a deployed app：
+##### If you want to update a deployed app：
 First comment out the registerNamespace and registerFunctionSelector parts in ./script/MyAppExtension.s.sol:
 ```solidity
 // world.registerNamespace(namespaceResource);
@@ -66,7 +66,7 @@ pnpm run upload
 
 ## Command
 ### pnpm run deploy
-###### if you set RPC_URL, you should set CHAIN_ID
+##### if you set RPC_URL, you should set CHAIN_ID
 ```sh
 pnpm run deploy
     INIT if INIT=false,update the system, default true
