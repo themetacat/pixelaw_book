@@ -82,8 +82,11 @@ function init() public {
 
 ```
 Now that we get to the interact function, which is called by default by the front end unless otherwise specified. 
+
 Most importantly it calls the `ICoreSystem(_world()).update_pixel` to change the color of a pixel that has been clicked.
+
 When calling update_pixel, if you do not want to set a value for one of the parameters or change the original value of the pixel, please do this:
+
 If the parameter type is address, please pass in address(1),
 If the parameter type is string, please pass in "_Null"
 This will automatically skip the permission check and assignment of the parameter.
