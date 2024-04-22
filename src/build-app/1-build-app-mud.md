@@ -17,7 +17,7 @@ Lets check out the folder structure first of the [App Template](https://github.c
     - `deploy.sh` deploy your app contract and init your app.
     - `upload_json.sh` upload your abi to github.
   - `mud.config.ts` your app's table and namespace config.
-  - `.env` contains the values required to deploy the MUD and pixelLAW core
+  - `.env` contains the values required to deploy the MUD and pixeLAW core
 
 The default App Template includes the contract code of Paint App which allows users to paint any pixel with any color.
 
@@ -27,7 +27,7 @@ Let's dive into the code of the [App Template](https://github.com/themetacat/pix
 
 ### Imports
 
-At first we require certain imports from the core to enable our paint app. Depending on your use case you might require different imports. Refer to the [Pixel Core](https://github.com/themetacat/pixelaw_core),
+At first we require certain imports from the core to enable our paint app. Depending on your use case you might require different imports. Refer to the [PixeLAW Core](https://github.com/themetacat/pixelaw_core),
 
 ```solidity
 import { System } from "@latticexyz/world/src/System.sol";
