@@ -46,7 +46,7 @@ import { PermissionsData, DefaultParameters, Position, PixelUpdateData, Pixel, P
 
 4. The **APP_NAME** is the unique username of your app, and has to be the same across the entire platform.
 
-5. The **APP_MANIFEST** simply has to be adjusted according to your APP_NAME.
+5. The **APP_MANIFEST** simply has to be adjusted according to your Contract name.
 
 ```solidity
 // Core only supports unicode icons for now
