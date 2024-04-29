@@ -40,6 +40,9 @@ Awesome, you just successfully deployed your own PixeLAW App! If you fail, pleas
 pnpm mud build
 ```
 
+#### Change your PRIVATE_KEY and WORLD_ADDRESS:
+Change the private key and core world address on the chain to be deployed in .env.
+
 #### Deploy/Update your App:
 ##### If the app contract is deployed for the first time: 
 ```sh
